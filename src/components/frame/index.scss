@@ -1,0 +1,22 @@
+@use "../../../palette.scss";
+
+.bh-frame {
+    background: palette.$color-neutral-02;
+    padding: 32px;
+    box-shadow: 0px 0px 0px 2px palette.$color-neutral-04;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    .title {
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .frame-label {
+        margin-bottom: -12px;
+        color: palette.$color-neutral-08;
+        font-variant: all-small-caps;
+    }
+}
