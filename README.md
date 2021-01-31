@@ -15,11 +15,11 @@ Feel free to contribute. If you want to add new components, I ask that they foll
  - They should not be problem specific (i.e. a scrollable list component would fine, but a "note" list would be too specific)
  - They should be bug free (to the best of your knowledge -- this is a UI framework, not part of the problem itself)
  - They should follow the basic style used in this package
-   - [] Components grouped in folders
-   - [] Functional components where possible
-   - [] Styles reference the palette, not specific values
-   - [] No unpredictable state
-   - [] Readable code
+   - [ ] Components grouped in folders
+   - [ ] Functional components where possible
+   - [ ] Styles reference the palette, not specific values
+   - [ ] No unpredictable state
+   - [ ] Readable code
 
 ## Credit
 
