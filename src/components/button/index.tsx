@@ -7,7 +7,8 @@ import "./index.scss";
 export interface Props {
     label: React.ReactNode;
     onClick?: () => void;
-    className?: string
+    className?: string;
+    disabled?: boolean;
 }
 
 export const Button = (props: Props) => {
@@ -15,6 +16,7 @@ export const Button = (props: Props) => {
         <button
             className={classes(props.className, "bh-button")}
             onClick={() => props.onClick?.()}
+            disabled={props.disabled}
         >
             { props.label }
         </button>

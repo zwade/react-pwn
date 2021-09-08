@@ -23,4 +23,9 @@
         box-shadow: 0px 0px 0px 2px palette.$color-primary-04;
         background-color: palette.$color-primary-04;
     }
+
+    &:disabled {
+        box-shadow: 0px 0px 0px 2px palette.$color-neutral-06;
+        background-color: palette.$color-neutral-05;
+    }
 }
