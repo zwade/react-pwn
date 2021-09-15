@@ -1,0 +1,44 @@
+@use "../../../palette.scss" as palette;
+
+.bh-checkbox {
+    display: flex;
+    flex-direction: column;
+
+    .bh-checkbox-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+
+        .checkbox {
+            width: 12px;
+            height: 12px;
+            border: 2px solid palette.$color-neutral-05;
+            border-radius: 4px;
+            margin-right: 6px;
+            margin-bottom: -2px;
+            transition: background-color 100ms ease-in, border-color 100ms ease-in;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+                content: "✓";
+                color: palette.$color-neutral-01;
+                font-size: 10px;
+                font-weight: bold;
+                opacity: 0;
+                transition: opacity 100ms ease-in;
+            }
+
+            &[data-clicked=true] {
+                background: palette.$color-primary-04;
+                border-color: palette.$color-primary-07;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

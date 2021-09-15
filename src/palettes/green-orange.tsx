@@ -34,5 +34,11 @@ export const GreenOrangePalette: Palette = {
     "secondary-08": 0xFF8F00,
     "secondary-09": 0xFF6F00,
 
-    "error": 0xf44336,
+    "error-00": 0xE57373,
+    "error-01": 0xEF5350,
+    "error-02": 0xf44336,
+
+    "success-00": 0x81C784,
+    "success-01": 0x66BB6A,
+    "success-02": 0x4CAF50,
 }

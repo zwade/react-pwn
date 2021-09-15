@@ -1,30 +1,106 @@
 @use "../../../palette.scss";
 
 .bh-button {
-    height: 44px;
-    min-width: 400px;
-    font-size: 14px;
-    border-radius: 4px;
-    border: 0px;
-    box-shadow: 0px 0px 0px 2px palette.$color-primary-06;
-    background-color: palette.$color-primary-06;
-    outline: none;
-    color: palette.$color-neutral-00;
-    cursor: pointer;
+    display: inline-block;
+    margin: 2px;
 
-    transition: background-color 100ms ease-in, box-shadow 100ms ease-in;
+    button {
+        height: 44px;
+        min-width: 400px;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 4px;
+        border: 0px;
+        outline: none;
+        cursor: pointer;
 
-    &:hover {
-        box-shadow: 0px 0px 0px 2px palette.$color-primary-05;
-        background-color: palette.$color-primary-05;
+        transition: background-color 100ms ease-in, box-shadow 100ms ease-in;
     }
 
-    &:active {
-        box-shadow: 0px 0px 0px 2px palette.$color-primary-04;
-        background-color: palette.$color-primary-04;
+    &.small button {
+        min-width: 80px;
     }
 
-    &:disabled {
+    &.primary button {
+        box-shadow: 0px 0px 0px 2px palette.$color-primary-06;
+        background-color: palette.$color-primary-06;
+        color: palette.$color-neutral-00;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 2px palette.$color-primary-05;
+            background-color: palette.$color-primary-05;
+        }
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px palette.$color-primary-04;
+            background-color: palette.$color-primary-04;
+        }
+    }
+
+    &.secondary button {
+        box-shadow: 0px 0px 0px 2px palette.$color-secondary-06;
+        background-color: palette.$color-secondary-06;
+        color: palette.$color-neutral-00;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 2px palette.$color-secondary-05;
+            background-color: palette.$color-secondary-05;
+        }
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px palette.$color-secondary-04;
+            background-color: palette.$color-secondary-04;
+        }
+    }
+
+    &.danger button {
+        box-shadow: 0px 0px 0px 2px palette.$color-error-02;
+        background-color: palette.$color-error-02;
+        color: palette.$color-neutral-00;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 2px palette.$color-error-01;
+            background-color: palette.$color-error-01
+        }
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px palette.$color-error-00;
+            background-color: palette.$color-error-00;
+        }
+    }
+
+    &.safe button {
+        box-shadow: 0px 0px 0px 2px palette.$color-success-02;
+        background-color: palette.$color-success-02;
+        color: palette.$color-neutral-00;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 2px palette.$color-success-01;
+            background-color: palette.$color-success-01
+        }
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px palette.$color-success-00;
+            background-color: palette.$color-success-00;
+        }
+    }
+
+    &.hollow button{
+        box-shadow: 0px 0px 0px 2px palette.$color-neutral-08;
+        background-color: palette.$color-neutral-00;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 2px palette.$color-neutral-05;
+            background-color: palette.$color-neutral-00;
+        }
+
+        &:active {
+            box-shadow: 0px 0px 0px 2px palette.$color-neutral-05;
+            background-color: palette.$color-neutral-03;
+        }
+    }
+
+    button:disabled {
         box-shadow: 0px 0px 0px 2px palette.$color-neutral-06;
         background-color: palette.$color-neutral-05;
     }
