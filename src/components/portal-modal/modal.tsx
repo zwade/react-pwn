@@ -9,6 +9,7 @@ interface ModalProps {
     title?: string;
     onContinue?: () => void;
     onCancel?: () => void;
+    onClose?: () => void;
     dangerous?: boolean;
     cancelMessage?: string;
     continueMessage?: string;
@@ -17,10 +18,11 @@ interface ModalProps {
 
 const _Modal = (props: ModalProps) => {
     return (
-        <div
-            className="bh-modal"
-            onClick={() => props.onCancel?.()}
-        >
+        <div className="bh-modal">
+            <div
+                className="bh-modal-background"
+                onClick={() => (props.onClose ?? props.onCancel)?.()}
+            />
             <Frame className="bh-modal-frame">
                 { props.title && <div className="title">{ props.title }</div> }
                 { props.children }
