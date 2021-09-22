@@ -12,6 +12,7 @@
             height: 12px;
             border-radius: 12px;
             box-shadow: 0px 0px 0px 2px palette.$color-neutral-05;
+            margin-left: 2px;
             margin-right: 8px;
             margin-bottom: -2px;
             display: flex;
@@ -34,6 +35,27 @@
 
                 &::before {
                     background: palette.$color-primary-04;
+                }
+            }
+        }
+    }
+
+    &.disabled {
+        .radio-option {
+            cursor: not-allowed;
+
+            .bubble {
+                box-shadow: 0px 0px 0px 2px palette.$color-neutral-06;
+                background-color: palette.$color-neutral-01;
+            }
+
+            &.active {
+                .bubble {
+                    box-shadow: 0px 0px 0px 2px palette.$color-neutral-06;
+
+                    &::before {
+                        background: palette.$color-neutral-05;
+                    }
                 }
             }
         }

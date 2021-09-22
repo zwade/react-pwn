@@ -41,4 +41,20 @@
             }
         }
     }
+
+    &.disabled {
+        .bh-checkbox-row {
+            cursor: not-allowed;
+
+            .checkbox {
+                border: 2px solid palette.$color-neutral-05;
+                background: palette.$color-neutral-01;
+
+                &[data-clicked=true] {
+                    background: palette.$color-neutral-04;
+                    border-color: palette.$color-neutral-07;
+                }
+            }
+        }
+    }
 }

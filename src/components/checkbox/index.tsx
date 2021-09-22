@@ -5,9 +5,10 @@ import "./index.scss";
 
 export interface Props<T extends any> {
     value: Set<T>;
-    options: { label: string, value: T }[];
+    options: { label: React.ReactNode, value: T }[];
     onChange?: (value: Set<T>) => void;
     className?: string;
+    disabled?: boolean;
 }
 
 const add = <T extends any>(s: Set<T>, datum: T) => {
@@ -32,10 +33,11 @@ const toggle = <T extends any>(s: Set<T>, datum: T) => {
 
 export const Checkbox = <T extends any>(props: Props<T>) => {
     return (
-        <div className={classes("bh-checkbox", props.className)}>
+        <div className={classes("bh-checkbox", props.className, props.disabled ? "disabled" : "")}>
             {
-                props.options.map((option) => (
+                props.options.map((option, i) => (
                     <div
+                        key={i}
                         className="bh-checkbox-row"
                         onClick={() => props.onChange?.(toggle(props.value, option.value))}
                     >
