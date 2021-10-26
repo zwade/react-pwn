@@ -23,10 +23,13 @@
         background: rgba(0, 0, 0, 0.5);
     }
 
-    .bh-modal-frame {
+    .bh-modal-frame, .bh-modal-empty-content {
         grid-area: content;
         z-index: 1;
+    }
 
+
+    .bh-modal-frame {
         .action-row {
             display: flex;
             flex-direction: row;

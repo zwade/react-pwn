@@ -6,7 +6,7 @@ export { Input, TextArea } from "./components/input";
 export { Radio } from "./components/radio";
 export { Tabs } from "./components/tabs";
 export { Checkbox } from "./components/checkbox";
-export { ModalProvider, Modal } from "./components/portal-modal";
+export { ModalProvider, Modal, EmptyModal } from "./components/portal-modal";
 
 export { Palette, Palettes } from "./palettes";
 

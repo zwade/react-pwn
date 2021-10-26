@@ -6,7 +6,7 @@ import { Frame } from "../frame";
 import { ModalContext } from "./provider";
 
 interface ModalProps {
-    title?: string;
+    title?: React.ReactNode;
     onContinue?: () => void;
     onCancel?: () => void;
     onClose?: () => void;
