@@ -19,7 +19,7 @@ Feel free to contribute. If you want to add new components, I ask that they foll
    - [ ] Functional components where possible
    - [ ] Styles reference the palette, not specific values
    - [ ] No unpredictable state
-   - [ ] Readable code
+   - [x] Readable code
 
 ## Credit
 
