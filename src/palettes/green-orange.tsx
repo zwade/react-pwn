@@ -41,4 +41,14 @@ export const GreenOrangePalette: Palette = {
     "success-00": 0x81C784,
     "success-01": 0x66BB6A,
     "success-02": 0x4CAF50,
+
+    "warning-00": 0xFFA000,
+    "warning-01": 0xFF8C00,
+    "warning-02": 0xF75E2F,
+
+    "info-00": 0x64B5F6,
+    "info-01": 0x00D4FF,
+    "info-02": 0x00B0FF,
+
+    "is-dark-theme": 0,
 }

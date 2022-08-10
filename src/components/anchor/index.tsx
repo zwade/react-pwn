@@ -7,16 +7,26 @@ import "./index.scss";
 
 export interface Props {
     href?: string;
+    target?: string;
     onClick?: () => void;
     children?: React.ReactNode;
     className?: string;
 }
 
 export const A = (props: Props) => {
-    console.log(React);
     const { navigate } = React.useContext(NavigationContext);
 
-    const onClick = () => (props.onClick?.(), props.href ? navigate(props.href) : undefined);
+    const onClick = () => {
+        props.onClick?.();
+        if (props.href) {
+            // TODO(zwade): Check origin
+            if (props.href.startsWith("http")) {
+                window.open(props.href, props.target ?? "_blank");
+            } else {
+                navigate(props.href);
+            }
+        }
+    };
     return (
         <a className={classes("rp-anchor", props.className)} onClick={onClick}>{ props.children }</a>
     );

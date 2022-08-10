@@ -1,0 +1,9 @@
+@use "../../../palette.scss";
+
+.bh-hr {
+    border: none;
+    border-style: unset;
+    border-bottom: 1px solid palette.$color-neutral-05;
+    margin: 1rem 0rem;
+    opacity: 0.5;
+}

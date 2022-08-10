@@ -104,4 +104,94 @@
         box-shadow: 0px 0px 0px 2px palette.$color-neutral-06;
         background-color: palette.$color-neutral-05;
     }
+
+    @include palette.dark-theme {
+        button {
+            color: palette.$color-neutral-01;
+        }
+
+        &.small button {
+            min-width: 80px;
+        }
+
+        &.primary button {
+            box-shadow: 0px 0px 0px 2px palette.$color-primary-04;
+            background-color: palette.$color-primary-04;
+
+            &:hover {
+                box-shadow: 0px 0px 0px 2px palette.$color-primary-05;
+                background-color: palette.$color-primary-05;
+            }
+
+            &:active {
+                box-shadow: 0px 0px 0px 2px palette.$color-primary-06;
+                background-color: palette.$color-primary-06;
+            }
+        }
+
+        &.secondary button {
+            box-shadow: 0px 0px 0px 2px palette.$color-secondary-04;
+            background-color: palette.$color-secondary-04;
+
+            &:hover {
+                box-shadow: 0px 0px 0px 2px palette.$color-secondary-05;
+                background-color: palette.$color-secondary-05;
+            }
+
+            &:active {
+                box-shadow: 0px 0px 0px 2px palette.$color-secondary-06;
+                background-color: palette.$color-secondary-06;
+            }
+        }
+
+        &.danger button {
+            box-shadow: 0px 0px 0px 2px palette.$color-error-00;
+            background-color: palette.$color-error-00;
+
+            &:hover {
+                box-shadow: 0px 0px 0px 2px palette.$color-error-01;
+                background-color: palette.$color-error-01
+            }
+
+            &:active {
+                box-shadow: 0px 0px 0px 2px palette.$color-error-02;
+                background-color: palette.$color-error-02;
+            }
+        }
+
+        &.safe button {
+            box-shadow: 0px 0px 0px 2px palette.$color-success-00;
+            background-color: palette.$color-success-00;
+
+            &:hover {
+                box-shadow: 0px 0px 0px 2px palette.$color-success-01;
+                background-color: palette.$color-success-01
+            }
+
+            &:active {
+                box-shadow: 0px 0px 0px 2px palette.$color-success-02;
+                background-color: palette.$color-success-02;
+            }
+        }
+
+        &.hollow button{
+            box-shadow: 0px 0px 0px 2px palette.$color-neutral-01;
+            background-color: rgba(0, 0, 0, 0);
+
+            &:hover {
+                box-shadow: 0px 0px 0px 2px palette.$color-neutral-02;
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            &:active {
+                box-shadow: 0px 0px 0px 2px palette.$color-neutral-02;
+                background-color: palette.$color-neutral-02;
+            }
+        }
+
+        button:disabled {
+            box-shadow: 0px 0px 0px 2px palette.$color-neutral-04;
+            background-color: palette.$color-neutral-05;
+        }
+    }
 }

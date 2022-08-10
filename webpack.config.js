@@ -56,4 +56,7 @@ module.exports = {
         "react": "react",
         "react-dom": "react-dom"
     },
+    devServer: {
+        writeToDisk: true
+    }
 };

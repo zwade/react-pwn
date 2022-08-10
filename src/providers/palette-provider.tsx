@@ -16,13 +16,15 @@ export const PaletteProvider = (props: Props) => {
     // This is both a React provider and a css provider;
     const css = {} as Record<string, string>;
     for (const name of keys(props.palette)) {
-        css[`--color-${name}`] = formatHex(props.palette[name]);
+        if (name !== "is-dark-theme") {
+            css[`--color-${name}`] = formatHex(props.palette[name]);
+        }
     }
     css["display"] = "contents";
 
     return (
         <PaletteContext.Provider value={props.palette}>
-            <div style={css as React.CSSProperties}>
+            <div style={css as React.CSSProperties} className={props.palette["is-dark-theme"] ? "dark-theme" : ""}>
                 { props.children }
             </div>
         </PaletteContext.Provider>

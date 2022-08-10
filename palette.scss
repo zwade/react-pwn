@@ -39,5 +39,19 @@ $color-success-00: var(--color-success-00);
 $color-success-01: var(--color-success-01);
 $color-success-02: var(--color-success-02);
 
+$color-warning-00: var(--color-warning-00);
+$color-warning-01: var(--color-warning-01);
+$color-warning-02: var(--color-warning-02);
+
+$color-info-00: var(--color-info-00);
+$color-info-01: var(--color-info-01);
+$color-info-02: var(--color-info-02);
+
 $color-error: var(--color-error-02);
 $color-success: var(--color-success-02);
+
+@mixin dark-theme() {
+    @at-root .dark-theme #{&} {
+        @content;
+    }
+}
